@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+}
+
+.logo {
+    color: orange;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify right;
+}
+
+main {
+    margin: auto 25%;
+    text-align: justify;
+    padding: 10px;
+}
+
+.address {
+    text-align: center;
+    padding: 10px;
+    
+}
+
+
+.faq  {
+    margin: auto 25%;
+    padding: 10px;
+    line-height: 1.5rem;
+}
+
+hr {
+    width: 50%;
+}
+
+.faq h4 ~ p {
+    margin-top: 25px 0 25px 0;
+}
+
+main a {
+    color: rgb(32, 32, 32);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+main a:hover,
+main a:focus {
+    color: blue;
+}

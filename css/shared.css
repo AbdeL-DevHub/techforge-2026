@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.hero {
+    text-align: center;
+}
+
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+}
+
+
+ .hero a {
+    display: block;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    transition: transform 0.5s ease;
+}
+
+.hero a:hover {
+    color: white;
+    background-color: blue;
+    transform: scale(1.2);
+    box-shadow: 0 3px 2px orange;
+}
+
+nav a[aria-current="page"] {
+    background-color: blue;
+    color: white;
+    border-bottom: 1px solid #0f0f0f; /* to match your hover style */
+}

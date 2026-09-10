@@ -1,0 +1,44 @@
+
+
+h1 > span {
+    color: orange;
+}
+
+figure {
+    text-align: center;
+}
+
+figure > img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+    max-width: 100%;
+    height: auto;
+}
+
+figure > figcaption {
+    color: orange;
+    font-weight: bolder;
+}
+
+figure ~ p {
+    margin: 0 auto;
+    line-height: 1rem;
+}
+
+figure ~ h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+p > em {
+    color: orange;
+    font-weight: bolder;
+}
+
+
+h2 ~ p {
+    line-height: 2.5;
+    width: 40%;
+}
+

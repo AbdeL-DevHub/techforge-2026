@@ -1,0 +1,54 @@
+
+h1 > span,
+.main > h3 > span,
+address > h4 > span {
+    color: orange;
+}
+
+.main h4,
+address > h4 > span {
+    color: rgb(29, 29, 141);
+}
+
+h1 {
+    background-color: rgb(238, 242, 250);
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+address {
+    text-align: center;
+}
+
+p {
+    max-width: 600px;
+    min-width: 200px;
+    text-align: justify;
+}
+
+
+.main > h3 ~ ul > li {
+    list-style-position: outside;
+    list-style-type: disc;
+    padding: 5px;
+}
+
+.main {
+     margin: auto 25%;
+    text-align: justify;
+    padding: 10px;
+}
+
+ h1 > span {
+    display: inline-block;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+
+

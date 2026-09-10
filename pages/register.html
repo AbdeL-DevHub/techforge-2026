@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/shared.css"/>
+        <link rel="stylesheet" href="../css/register.css">
+        <title>Registration</title>
+    </head>
+    <body>
+        <header class="hero">
+            <nav>
+              <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./register.html" aria-current="page">Register</a></li>
+                <li><a href="./schedule.html">Schedule</a></li>
+                <li><a href="./speakers.html">Speakers</a></li>
+                <li><a href="../index.html">Home</a></li>
+              </ul>
+            </nav>
+        </header>
+            <h1>Register for <span class="logo">TechForge</span> 2026</h1>
+            <p>Join hundreds of developers, designers, engineers, and technology enthusiasts for three days 
+                of learning and networking.</p>
+                <form action="/submit-form" method="post">
+                    <fieldset class="information">
+                        <legend>Personal information</legend>
+                        <label for="first-name">First Name<span aria-hidden="true">*</span></label>
+                        <input id="first-name" type="text" name="first-name" required placeholder="Enter your first name"/>
+                        <label for="last-name">Last Name<span aria-hidden="true">*</span></label>
+                        <input id="last-name" type="text" name="last-name" required placeholder="Enter your last name"/>
+                        <label for="mail">E-Mail<span aria-hidden="true">*</span></label>
+                        <input id="mail" type="email" placeholder="Enter your email address" required/>
+                        <label for="phone">Phone Number<span aria-hidden="true">*</span></label>
+                        <input id="phone" type="tel" placeholder="Enter you phone number" required/>
+                    </fieldset>
+                    <fieldset class="information">
+                        <legend>Professional information</legend>
+                        <label for="job">Company / Organization</label>
+                        <input id="job" name="job" type="text" placeholder="Tell us where you work or study.">
+                        <label for="xp">Experience level</label>
+                        <select id="xp" name="experience">
+                            <option value="student">Student</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate" selected>Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="interests">
+                        <legend>Choose your interests</legend>
+                        <div class="option-group">
+                        <label for="web-development">Web Development</label>
+                        <input id="web-development" name="interest" value="web-development" type="checkbox" checked/>
+                        </div>
+                        <div class="option-group">
+                        <label for="javascript">JavaScript</label>
+                        <input id="javascript" name="interest" value="javascript" type="checkbox">
+                        </div>
+                        <div class="option-group">
+                        <label for="ai">Artificial Intelligence</label>
+                        <input id="ai" name="interest" value="ai" type="checkbox">
+                        </div>
+                        <div class="option-group">
+                        <label for="security">Cybersecurity</label>
+                        <input id="security" name="interest" value="security" type="checkbox">
+                        </div>
+                        <div class="option-group">
+                        <label for="design">UI/UX Design</label>
+                        <input id="design" name="interest" value="design" type="checkbox">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Attendance</legend>
+                        <label for="day">Which days will you attend?</label>
+                        <select id="day" name="day">
+                            <option value="friday">Friday, October 16</option>
+                            <option value="saturday">Saturday, October 17</option>
+                            <option value="sunday">Sunday, October 18</option>
+                            <option value="all">All three days</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Would you like to participate in workshops?</legend>
+                        <label for="workshop-yes">Yes</label>
+                        <input id="workshop-yes" type="radio" name="workshop" value="yes"/>
+                        <label for="workshop-no">No</label>
+                        <input id="workshop-no" name="workshop" value="no" type="radio"/>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Preferred workshop</legend>
+                        <div class="option-group">
+                        <label for="cloud">Cloud Architecture</label>
+                        <input id="cloud" name="choice" value="cloud" type="radio">
+                        </div>
+                        <div class="option-group">
+                        <label for="web-security">Security for Web Developers</label>
+                        <input id="web-security" name="choice" value="web-security" type="radio">
+                        </div>
+                        <div class="option-group">
+                        <label for="ai-app">Building Your First AI-Powered App</label>
+                        <input id="ai-app" name="choice" value="ai-app" type="radio" checked>
+                        </div>
+                    </fieldset>
+                    <fieldset class="comments">
+                    <legend>Accessibility</legend>
+                    <textarea id="comments" name="comments" placeholder="Please let us know if there is anything we can do to make your experience more comfortable."></textarea>
+                    </fieldset>
+                    <fieldset class="newsletter">
+                    <legend>Newsletter</legend>
+                    <input id="newsletter" type="checkbox" value="subscribe" name="newsletter"/>
+                    <label for="newsletter">Subscribe me to the <span class="logo">TechForge</span> newsletter for conference updates and future events.</label>
+                    </fieldset>
+                    <fieldset>
+                    <input id="agreement" type="checkbox" value="agree" name="agreement">
+                    <label for="agreement">I agree to the <span class="logo">TechForge</span> 2026 terms and conditions.</label>
+                    </fieldset>
+                    <button type="submit" class="submit">Register Now</button>
+                    <button type="reset" class="reset">Reset Form</button>
+                    
+                
+                </form>
+        </body>
+        </html>
