@@ -6,7 +6,7 @@ h1 {
     margin: 15px auto;
 }
 h1 >span {
-    color: crimson;
+    color: orange;
 }
 
  .container > .cards {
@@ -43,7 +43,7 @@ h1 >span {
     font-family: serif;
 }
 .container h4{
-    color: crimson;
+    color: #cc0000;
 }
 
 
