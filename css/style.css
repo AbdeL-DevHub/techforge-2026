@@ -4,6 +4,10 @@ h1 > span {
     color: orange;
 }
 
+h1:has(span)::first-letter{
+    font-size: 3rem;
+}
+
 figure {
     text-align: center;
 }

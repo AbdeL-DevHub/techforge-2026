@@ -11,11 +11,15 @@ address > h4 > span {
 }
 
 h1 {
-    background-color: rgb(238, 242, 250);
     width: 300px;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+}
+
+
+h1 > span::first-letter{
+    font-size: 3rem;
 }
 
 

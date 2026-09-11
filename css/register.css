@@ -40,6 +40,13 @@ input {
     color: orange;
 }
 
+h1 > span {
+    display: inline-block;
+}
+
+h1 > span::first-letter{
+    font-size: 3rem;
+}
 label, 
 legend,
 .interests,

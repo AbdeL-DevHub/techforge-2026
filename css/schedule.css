@@ -27,6 +27,10 @@ h2 ~ span {
     margin: 0 auto;
 }
 
+h2:has(span)::first-letter{
+    font-size: 2rem;
+}
+
 tbody > tr:nth-of-type(3) > td:nth-last-of-type(1){
     color: blue;
 }
