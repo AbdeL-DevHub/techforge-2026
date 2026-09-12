@@ -94,13 +94,14 @@ select > option {
     transition: transform 0.5s ease;
 }
 
-.submit:hover,
-.reset:hover{
+
+:is(.submit, .reset):hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+
+input:is([type="checkbox"], [type="radio"]){
     accent-color: green;
 }
 
@@ -115,12 +116,9 @@ textarea {
     padding: 5px;
 }
 
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
+:is(input, textarea):is(:hover, :focus) {
     outline: none;
-    box-shadow: 0px -1px  1px green inset;
+    box-shadow: 0px -1px 1px green inset;
 }
 
 .newsletter,

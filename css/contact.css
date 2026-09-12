@@ -52,7 +52,6 @@ main a {
     text-decoration: none;
 }
 
-main a:hover,
-main a:focus {
+main a:is(:hover, :focus) { 
     color: blue;
 }

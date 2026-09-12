@@ -82,13 +82,10 @@ span > em {
     background-color: blue;
 }
 
-#maya-card:target,
-#daniel-card:target,
-#sofia-card:target {
+
+:is(#maya-card, #daniel-card, #sofia-card):target{
    box-shadow: 1px 0 15px red;
    transform: scale(1.04);
    transition: transform 0.5s, box-shadow 0.5s;
 }
-
-
 

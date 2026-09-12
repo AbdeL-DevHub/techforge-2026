@@ -57,11 +57,8 @@ td{
     font-weight: 600;
 }
 
- #maya:target,
- #daniel:target,
- #sofia:target {
-   box-shadow: 0px 2px 10px orange inset;
-   
-}
+:is(#maya, #daniel, #sofia):target{
+    box-shadow: 0px 2px 10px orange inset;
 
+}
 
