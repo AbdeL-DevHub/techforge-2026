@@ -30,7 +30,7 @@ input:required::placeholder {
 }
 
 
-input {
+input:not(input[type="radio"], input[type="checkbox"]) {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc; /* This overrides the browser default */
@@ -84,6 +84,8 @@ select > option {
 
 .submit,
 .reset {
+    border:none;
+    font-family: inherit;
     display: inline-block;
     margin-top: 20px;
     text-align: center;
@@ -102,7 +104,29 @@ select > option {
 
 
 input[type="checkbox"]{
-    accent-color: green;
+  appearance: none;
+  width: 2px;
+  height: 2px;
+  border: 1px solid gray;
+  vertical-align: middle;
+  padding:7px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: hsl(120, 96%, 67%);
+  border-color: hsl(120, 96%, 67%);
+  
+}
+
+
+input[type="checkbox"]:checked::after{
+   content:"\2713";
+   font-weight:bold;
+   position: relative;
+   bottom:9px;
+   right:5px;
+
 }
 
 textarea {
@@ -116,7 +140,7 @@ textarea {
     padding: 5px;
 }
 
-:is(input, textarea):not(input[type="radio"]):is(:hover, :focus) {
+:is(input, textarea):not(input[type="radio"], input[type="checkbox"]):is(:hover, :focus) {
     outline: none;
     box-shadow: 0px -1px 3px green inset;
 }
@@ -139,5 +163,5 @@ input[type="radio"]{
 }
 
 input[type="radio"]:checked{
-    background-color: rgb(50, 170, 50);
+    background-color: hsl(120, 96%, 67%);
 }
