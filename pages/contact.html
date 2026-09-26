@@ -9,16 +9,23 @@
     </head>
     <body>
         <header class="hero">
-             <nav>
-                <ul>
-                   <li><a href="./about.html">About</a></li>
-                   <li><a href="./contact.html"    aria-current="page">Contact</a></li>
-                   <li><a href="./register.html">Register</a></li>
-                   <li><a href="./schedule.html">Schedule</a></li>
-                   <li><a href="./speakers.html">Speakers</a></li>
-                   <li><a href="../index.html">Home</a></li>
-                </ul>
-            </nav>
+                <nav>
+            <ul>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"> <a href="contact.html" aria-current="page">Contact</a></li>
+                <li class="nav-item"><a href="register.html">Register</a></li>
+                <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+                <li class="nav-item">
+                    <a  href="speakers.html">Speakers</a>
+                   <ul class="dropdown">
+                        <li><a href="speakers.html#maya-card">Maya Chen</a></li>
+                        <li><a href="speakers.html#daniel-card">Daniel Okoro</a></li>
+                        <li><a href="speakers.html#sofia-card">Sofia Martinez</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
         </header>
         <main>
             <h1>Contact <span class="logo">TechForge</span> 2026</h1>

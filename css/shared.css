@@ -21,7 +21,7 @@ nav > ul > li {
 }
 
 
- .hero a {
+ .hero a:not(.dropdown a) {
     display: block;
     color: blue;
     font-family: Arial, Helvetica, sans-serif;
@@ -33,15 +33,46 @@ nav > ul > li {
     transition: transform 0.5s ease;
 }
 
-.hero a:hover {
+.hero a:not(.dropdown a):hover {
     color: white;
     background-color: blue;
     transform: scale(1.2);
     box-shadow: 0 3px 2px orange;
 }
 
-nav a[aria-current="page"] {
+nav .nav-item a[aria-current="page"] {
     background-color: blue;
     color: white;
     border-bottom: 1px solid #0f0f0f; /* to match your hover style */
 }
+
+.dropdown {
+    list-style: none;
+    visibility: hidden;
+    position: absolute;
+    margin:0;
+    padding:10px 5px;
+    line-height: 2rem;
+    opacity: 90%;
+    top: 100%;
+    border-radius: 10px;
+    background-color: white;
+    white-space: nowrap;
+}
+
+
+.dropdown a {
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+    opacity: 100%;
+}
+
+.nav-item {
+    position: relative;
+}
+
+
+.nav-item:hover > .dropdown {
+    visibility: visible;
+}
+
