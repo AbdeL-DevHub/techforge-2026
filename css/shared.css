@@ -53,18 +53,19 @@ nav .nav-item a[aria-current="page"] {
     margin:0;
     padding:10px 5px;
     line-height: 2rem;
-    opacity: 90%;
     top: 100%;
     border-radius: 10px;
-    background-color: white;
+    background-color: hsla(208, 22%, 21%, 0.7);
     white-space: nowrap;
+    
 }
-
 
 .dropdown a {
     text-decoration: none;
-    color: rgb(7, 7, 7);
+    color: rgb(235, 232, 232);
     opacity: 100%;
+    font-weight: 600;
+    
 }
 
 .nav-item {
@@ -72,7 +73,7 @@ nav .nav-item a[aria-current="page"] {
 }
 
 
-.nav-item:hover > .dropdown {
+.nav-item:hover .dropdown {
     visibility: visible;
 }
 
