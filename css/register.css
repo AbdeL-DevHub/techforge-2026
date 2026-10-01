@@ -2,10 +2,16 @@ form {
     max-width: 40vw;
     padding: 1rem;
     margin: 0 auto;
-    background-color: white;
+    margin-bottom:2rem;
+    background-color: rgb(245, 245, 245);
     border-radius: 20px;
+    font-family:inherit;
 }
-
+body {
+    padding:2rem;
+    padding-top:0;
+    margin:0;
+}
 input,
 select,
 textarea,
@@ -15,7 +21,7 @@ button {
 
 fieldset {
     padding: 1.2rem;
-    margin: 20px;
+    margin: 2rem;
     border: none;
     
 }
@@ -31,21 +37,23 @@ input:required::placeholder {
 
 
 input:not(input[type="radio"], input[type="checkbox"]) {
-    padding: 10px;
-    border-radius: 5px;
+    /* padding: 20px;
+    border-radius: 5px; */
     border: 1px solid #ccc; /* This overrides the browser default */
 }
 
-.logo {
-    color: orange;
-}
 
 h1 > span {
     display: inline-block;
 }
+h1 {
+    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
+}
 
 h1 > span::first-letter{
-    font-size: 3rem;
+    color: orange;
+    font-weight:900;
+    text-shadow: 0px 1px 3px  rgb(255, 0, 0);
 }
 label, 
 legend,
@@ -59,10 +67,16 @@ form {
     text-align: center;
 }
 label {
-    margin: 10px;
+    margin: 0.6rem;
 }
-form > fieldset:first-child > label > span, legend {
-    color: #cc0000;
+form > fieldset:first-child > label > span {
+    color: rgb(243, 54, 54);
+}
+
+form legend{
+    font-weight: 600;
+    font-size:1.06rem;
+    color: rgb(218, 37, 37);
 }
 
 
@@ -71,10 +85,10 @@ select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: white;
+
   font-family: inherit; /* This is key! Forms don't inherit fonts by default */
   font-size: 1rem;
-  color: #333;
+  
 }
 
 
@@ -86,19 +100,22 @@ select > option {
 .reset {
     border:none;
     font-family: inherit;
-    display: inline-block;
-    margin-top: 20px;
+    display: block;
+    margin: 2rem auto;
     text-align: center;
-    padding: 10px;
+    padding: 0.9rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
     color: white;
-    background-color: blue;
-    border-radius: 20px;
-    transition: transform 0.5s ease;
+    background-color: rgb(49, 49, 49);
+    transform: scale(1.05);
+    box-shadow: 0 3px 3px  orange;
+    transition: all 0.2s ease-in;
 }
 
 
 :is(.submit, .reset):hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     cursor: pointer;
 }
 
@@ -108,14 +125,15 @@ input[type="checkbox"]{
   width: 2px;
   height: 2px;
   border: 1px solid gray;
+  border-radius: 0.2rem;
   vertical-align: middle;
   padding:7px;
   transition: all 0.3s ease-in-out;
 }
 
 input[type="checkbox"]:checked {
-  background-color: hsl(120, 96%, 67%);
-  border-color: hsl(120, 96%, 67%);
+  background-color: hsl(93, 48%, 44%);
+  border-color: hsl(93, 48%, 44%);
   
 }
 
@@ -163,5 +181,6 @@ input[type="radio"]{
 }
 
 input[type="radio"]:checked{
-    background-color: hsl(120, 96%, 67%);
+    background-color: hsl(93, 48%, 44%);
+    border:none;
 }

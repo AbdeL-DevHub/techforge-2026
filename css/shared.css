@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *,
 *::before, 
 *::after {
@@ -5,11 +7,13 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color:rgb(241, 241, 241);
     height: 100vh;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'inter', 'Noto Sans Arabic';
 }
-
+:lang(ar) {
+  font-family: 'Noto Sans Arabic';
+}
 .hero {
     text-align: center;
 }
@@ -18,32 +22,42 @@ body {
 nav > ul > li {
     display: inline-block;
     list-style: none;
+    padding:1rem;
 }
 
+/* .nav-item  a {
+    color:red !important;
+
+} */
 
  .hero a:not(.dropdown a) {
     display: block;
-    color: blue;
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 3, 3);
+    font-family: inherit;
+    font-weight: 600;
     text-decoration: none;
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 5px;
-    transition: transform 0.5s ease;
+    background-color: rgb(240, 240, 240);
+    padding: 0.5rem;
+    border-radius: 5px;
+    /* margin: 5px; */
+    transition: all 0.5s ease-in-out;
+    border-bottom: 2px solid rgb(119, 119, 119);
 }
 
-.hero a:not(.dropdown a):hover {
+.hero a:not(.dropdown a):hover{
     color: white;
-    background-color: blue;
+    background-color: rgb(49, 49, 49);
     transform: scale(1.2);
-    box-shadow: 0 3px 2px orange;
+    box-shadow: 0 3px 3px  orange;
 }
 
 nav .nav-item a[aria-current="page"] {
-    background-color: blue;
     color: white;
-    border-bottom: 1px solid #0f0f0f; /* to match your hover style */
+    background-color: rgb(49, 49, 49);
+    transform: scale(1.3);
+    box-shadow: 0 3px 3px  orange;
+    filter:drop-shadow(-2px -2px 1px rgb(255, 255, 255));
+    /* to match your hover style */
 }
 
 .dropdown {
@@ -77,3 +91,6 @@ nav .nav-item a[aria-current="page"] {
     visibility: visible;
 }
 
+a{
+    font-family:'inter';
+}

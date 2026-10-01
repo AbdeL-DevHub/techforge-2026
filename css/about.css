@@ -1,7 +1,6 @@
 
-h1 > span,
-.main > h3 > span,
-address > h4 > span {
+
+  span::first-letter {
     color: orange;
 }
 
@@ -11,16 +10,20 @@ address > h4 > span {
 }
 
 h1 {
-    width: 300px;
-    border-radius: 10px;
-    padding: 10px;
+   color:rgb(31, 31, 31);
+    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
+    font-size: 2rem;
     text-align: center;
 }
 
 
-h1 > span::first-letter{
-    font-size: 3rem;
+h1::first-letter{
+    color:orange;
+    font-weight:900;
+    text-shadow: 0px 1px 3px  rgb(255, 0, 0);
 }
+
+
 
 
 address {
@@ -28,9 +31,10 @@ address {
 }
 
 p {
-    max-width: 600px;
-    min-width: 200px;
-    text-align: justify;
+   font-weight: normal;
+   font-size:1.05rem;
+   padding:0.5rem;
+   line-height:2.5rem;
 }
 
 

@@ -3,18 +3,20 @@
 
 h1 {
     text-align: center;
-    margin: 15px auto;
-}
-h1 >span {
-    color: orange;
+    margin: 0 auto;
+    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
+    font-size: 2rem;
 }
 
+
 h1:has(span)::first-letter{
-    font-size: 3rem;
+    color:orange;
+    font-weight:900;
+    text-shadow: 0px 1px 3px  rgb(255, 0, 0);
 }
 
  .container > .cards {
-    flex-basis: 33.33%;
+    flex-basis: 25%;
     border: 1px solid rgb(252, 252, 252);
     border-radius: 10px;
     text-align: center;
@@ -29,6 +31,7 @@ h1:has(span)::first-letter{
 .container > .cards:hover{
     transform: scale(1.02);
     box-shadow: -5px 0px 20px rgb(248, 228, 190);
+    
 }
 
 
@@ -36,11 +39,18 @@ h1:has(span)::first-letter{
 
 .container {
     display: flex;
-    flex-direction: row;
-    max-width: 50vw;
-    height:auto;
-    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    max-width: 90vw;
+    margin: 0 auto; 
+    padding:5rem;
 
+}
+
+.cards {
+    display:flex;
+    flex-flow: column wrap;
+    
 }
 
 .container h2 {
@@ -60,7 +70,12 @@ h1:has(span)::first-letter{
 
 .container img {
     width: 120px;
-    border-radius: 200px;
+    border-radius: 50%;
+    margin:0 auto;
+}
+
+.card-1 > img{
+    width:100px;
 }
 
 span > em {
@@ -89,3 +104,17 @@ span > em {
    transition: transform 0.5s, box-shadow 0.5s;
 }
 
+#daniel-card{
+    align-self: flex-end;
+    line-height: 1.8;
+    padding:0.9rem;
+}
+
+:is(#maya-card, #sofia-card){
+    align-self: flex-end;
+}
+
+#sofia-card {
+    flex-shrink:1;
+    line-height:2;
+}
