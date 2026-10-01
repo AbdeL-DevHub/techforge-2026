@@ -9,14 +9,18 @@ h2 {
 
 
   table, td, th {
-    border: 5px solid rgb(209, 208, 208);
+    border: 5px solid rgb(235, 233, 233);
     border-collapse: collapse;
+    border-top:none;
+    border-left:none;
     margin: 0 auto;
+    padding:1rem;
     width: 50vw;
     height: 8vh;
     text-align: center;
     background-color: white;
 }
+
 
 h2 ~ span {
     display: block;
