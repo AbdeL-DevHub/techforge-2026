@@ -1,86 +1,73 @@
+html {
+    box-sizing:border-box;
+    overflow:hidden;
+}
 
-
-h1::first-letter{
-    color:orange;
-    font-weight:900;
-    text-shadow: 0px 1px 3px  rgb(255, 0, 0);
+*,
+::before,
+::after {
+    box-sizing: inherit;
 }
 
 
-
-h1{
-    color:rgb(31, 31, 31);
-    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
-    font-size: 2rem;
-
-}
-nav {
-    margin-bottom:4rem;
-}
-
-
-
-figure > img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 0.4rem;
-    max-width: 55%;
-    height: auto;
-    filter:sepia(60%);
-    box-shadow:5px 0 8px 0 rgb(121, 148, 143), -5px 0 8px 0 rgb(121, 148, 143);
-}
-figure {
-   margin:0;
-}
-
-body{
-min-height: 100vh;
-}
-
-.content {
+.wrapper {
+    position: relative;
     display:flex;
-    flex-flow: column wrap;
-    align-items:center;
-    margin: 0 auto;
-    gap:1rem;
-    padding:5rem;
-    width:60%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', serif;
+    height:100vh;
+    background: linear-gradient(to top, rgb(21, 36, 82),black, black);
     
 }
 
-.content h2:only-of-type{
-    margin:0;
-    font-weight: 700;
-    color:rgb(31, 31, 31);
-    align-self: flex-start;
-    font-size:2rem;
-
+.wrapper p:first-of-type {
+    color:rgb(245, 245, 245);
+    width:fit-content;
+    background-color: rgb(65, 64, 64);
 }
 
-.content h2+p {
-    margin:0;
-    color:rgb(0, 0, 0);
-    font-size:1.2rem;
-    font-weight: normal;
-}
-.content h2+p::first-letter{
-    color: orange;
-    font-weight:bold;
-    text-decoration: underline;
-}
-
-figure ~ p {
-    margin: 0 auto;
-    line-height: 1.5rem;
-}
-
-figure ~ h2 {
-    text-decoration: underline;
+.brand {
+    font-size: 4rem;
+    width:25ch;
     text-align: center;
+    font-weight: 900;
+    color:hsl(0, 4%, 95%);
+    font-family: "DM Serif Display", serif;
+    margin-top:1rem;
 }
 
 
-h2 ~ p {
-    line-height: 2.5;
+.brand ~ p {
+    color:rgb(226, 226, 226);
+    width:70ch;
+    font-size:1.05rem;
+    font-weight:500;
+    color:rgb(172, 172, 172);
+    line-height:2.5;
+    text-wrap: pretty;
+    position: relative;
 }
 
+.brand ~ p::before {
+  content: "❝";
+  font-size: 2rem;
+  position: absolute;
+  top: -1.3rem;
+  left: -1.3rem;
+  opacity:0.5;
+}
+
+.brand ~ p::after {
+  content: "❞";
+  font-size: 2rem;
+  position: absolute;
+  bottom:-1.3rem;
+  left:10rem;
+  opacity:0.5;
+}
+
+.contrast {
+    color: rgb(241, 241, 241);
+}

@@ -1,5 +1,17 @@
 
+html {
+    box-sizing: border-box;
+}
 
+*,
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height:100vh;
+}
 
 h1 {
     text-align: center;
@@ -16,21 +28,16 @@ h1:has(span)::first-letter{
 }
 
  .container > .cards {
-    flex-basis: 25%;
-    border: 1px solid rgb(252, 252, 252);
-    border-radius: 10px;
+    border-radius: 0.7rem;
     text-align: center;
-    padding: 15px;
-    line-height: 2rem;
-    margin: 15px 15px;
     background-color: white;
-    transition: transform 0.5s ease-out;
+    transition: all 0.5s ease-out;
     
 }
 
 .container > .cards:hover{
     transform: scale(1.02);
-    box-shadow: -5px 0px 20px rgb(248, 228, 190);
+    box-shadow: -5px -1px 3px rgb(99, 80, 48);
     
 }
 
@@ -38,43 +45,63 @@ h1:has(span)::first-letter{
 
 
 .container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    max-width: 90vw;
-    margin: 0 auto; 
-    padding:5rem;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1.5rem;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    margin-block-start:10rem;
+    color:#222222;
 }
 
 .cards {
     display:flex;
-    flex-flow: column wrap;
-    
+    flex-flow: column nowrap;
+    padding:2rem;
+    line-height: 3rem;
+    word-spacing: 0.2rem;
+    transition: all 0.2s ease;
 }
 
-.container h2 {
-    font-family: serif;
-}
+
 .container h4{
-    color: #cc0000;
+    color: rgb(185, 18, 52);
 }
 
 
 .cards > p {
-    font-size: 1.1rem;
-    line-height: 2.5rem;
-    word-spacing: 0.5rem;
-    font-family: Verdana;
+    line-height: 2rem;
+    word-spacing: 0.2rem;
+}
+
+.cards > h2 {
+    color:rgb(80, 80, 80);
+}
+
+:is(.cards > span, span > em ){
+    color: rgb(80, 80, 80);
+}
+
+.cards > span {
+    font-weight: 600;
 }
 
 .container img {
     width: 120px;
+    height:auto;
     border-radius: 50%;
     margin:0 auto;
 }
 
-.card-1 > img{
+.card-2 > img{
+    width:110px;
+}
+
+
+.cards > img {
     width:100px;
 }
 
@@ -85,16 +112,20 @@ span > em {
 
 .cards > a {
     color: white;
-    background-color: black;
+    background-color: rgb(58, 58, 58);
     text-decoration: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 5px;
+    padding-inline:1rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: auto;
+    align-self: center;
+
 }
 
 .cards > a:hover {
     color: white;
-    background-color: blue;
+    background-color: rgb(46, 98, 146);
 }
 
 
@@ -104,17 +135,3 @@ span > em {
    transition: transform 0.5s, box-shadow 0.5s;
 }
 
-#daniel-card{
-    align-self: flex-end;
-    line-height: 1.8;
-    padding:0.9rem;
-}
-
-:is(#maya-card, #sofia-card){
-    align-self: flex-end;
-}
-
-#sofia-card {
-    flex-shrink:1;
-    line-height:2;
-}

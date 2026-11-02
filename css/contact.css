@@ -1,59 +1,89 @@
-h1 {
-    text-align: center;
-    color:rgb(31, 31, 31);
-    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
-    font-size: 2rem;
+html {
+    box-sizing: border-box;
 }
 
-
-
-h1 > span {
-    display: inline-block;
+*,
+::before,
+::after {
+    box-sizing:inherit;
 }
 
-h1 > span::first-letter{
-    color:orange;
-    font-weight:900;
-    text-shadow: 0px 1px 3px  rgb(255, 0, 0);
+h3 {
+    margin:0;
+    font-size: 1.5rem;
 }
 
-p {
-    text-align: justify right;
-}
 
 main {
-    margin: auto 25%;
-    text-align: justify;
-    padding: 10px;
+    width:fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin-inline: auto;
+    margin-block-end:0;
+    margin-block-start:10rem;
+    border-bottom: 2px solid gray;
+    line-height: 2;
+    padding-block-end:2rem;
+    color:hsl(0, 2%, 89%);
 }
 
+
 .address {
-    text-align: center;
-    padding: 10px;
+    text-align:center ;
+    line-height:2;
+    font-family: sans-serif, serif;
+    border-top:2px solid gray;
+    color:hsl(0, 1%, 72%);
+    width:fit-content;
+    margin-inline: auto;
+    padding-block:1rem;
+    font-size: 0.8rem;
     
 }
 
 
 .faq  {
-    margin: auto 25%;
-    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    width: 86ch;
+    margin: 0 auto;
+    padding-block: 2rem;
     line-height: 1.5rem;
+    color:hsl(0, 2%, 89%);
 }
 
-hr {
-    width: 50%;
-}
 
 .faq h4 ~ p {
-    margin-top: 25px 0 25px 0;
+    margin-top: 1.5rem 0 1.5rem 0;
 }
 
+.faq p {
+    margin-block:0;
+}
+
+.faq h4 {
+    margin-block-start:3rem;
+    margin-block-end:1rem;
+    font-size:1.2rem;
+}
+
+.faq h4~p {
+   padding-inline-start:2ch;
+}
+
+.faq h4::before {
+    content:"* ";
+    color:orangered;
+}
 main a {
-    color: rgb(220, 43, 20);
+    color: rgb(1, 95, 150);
     font-weight: 500;
     text-decoration: none;
 }
 
 main a:is(:hover, :focus) { 
-    color: blue;
+    color: rgb(1, 58, 92)
 }

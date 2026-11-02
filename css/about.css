@@ -1,19 +1,21 @@
 
-
-  span::first-letter {
-    color: orange;
+html {
+    box-sizing: border-box;
 }
 
-.main h4,
-address > h4 > span {
-    color: rgb(29, 29, 141);
+*,
+*::before, 
+*::after {
+    box-sizing: inherit;
+    
 }
+ 
 
-h1 {
-   color:rgb(31, 31, 31);
-    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
-    font-size: 2rem;
-    text-align: center;
+
+
+h3 {
+    color:rgb(184, 183, 183);
+    
 }
 
 
@@ -28,6 +30,9 @@ h1::first-letter{
 
 address {
     text-align: center;
+    color:rgb(129, 129, 129);
+    border-top:2px solid rgb(63, 63, 63);
+    padding-block-end:1.5rem;
 }
 
 p {
@@ -40,15 +45,21 @@ p {
 
 .main > h3 ~ ul > li {
     list-style-position: outside;
-    list-style-type: disc;
-    padding: 5px;
+    list-style-type: square;
+    padding-block:0.8rem;
 }
 
 .main {
-     margin: auto 25%;
-    text-align: justify;
-    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    width: min(100%, 65ch);
+    line-height:2;
+    margin-inline: auto;
+    margin-block-start:10rem;
+    margin-block-end:2rem;
+    color:rgb(230, 230, 230);
 }
+
 
  h1 > span {
     display: inline-block;
@@ -57,6 +68,7 @@ p {
 h1 {
     margin: 0 auto;
 }
+
 
 
 

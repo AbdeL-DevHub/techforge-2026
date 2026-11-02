@@ -9,37 +9,42 @@
     </head>
     <body>
         <header class="hero">
-             <nav>
-            <ul>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"> <a href="contact.html">Contact</a></li>
-                <li class="nav-item"><a href="register.html" aria-current="page">Register</a></li>
-                <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+                   <nav>
+            <ul class="navbar">
                 <li class="nav-item">
-                    <a  href="speakers.html">Speakers</a>
-                  <ul class="dropdown">
-                        <li><a href="speakers.html#maya-card">Maya Chen</a></li>
-                        <li><a href="speakers.html#daniel-card">Daniel Okoro</a></li>
-                        <li><a href="speakers.html#sofia-card">Sofia Martinez</a></li>
-                    </ul>
+                    <a href="../index.html">Home</a>
                 </li>
-                <li class="nav-item"><a href="../index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="schedule.html">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="speakers.html">Speakers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" aria-current="page">Register</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html">About</a>
+                </li>  
             </ul>
         </nav>
         </header>
-            <h1>Register for <span class="logo">TechForge</span> 2026</h1>
-            <p>Join hundreds of developers, designers, engineers, and technology enthusiasts for three days 
+        <main>
+            <p class="para">Join hundreds of developers, designers, engineers, and technology enthusiasts for three days 
                 of learning and networking.</p>
-                <form action="/submit-form" method="post">
+            <form action="/submit-form" method="post">
                     <fieldset class="information">
                         <legend>Personal information</legend>
-                        <label for="first-name">First Name<span aria-hidden="true">*</span></label>
+                        <label for="first-name">First Name<span aria-hidden="true"> *</span></label>
                         <input id="first-name" type="text" name="first-name" required placeholder="Enter your first name"/>
-                        <label for="last-name">Last Name<span aria-hidden="true">*</span></label>
+                        <label for="last-name">Last Name<span aria-hidden="true"> *</span></label>
                         <input id="last-name" type="text" name="last-name" required placeholder="Enter your last name"/>
-                        <label for="mail">E-Mail<span aria-hidden="true">*</span></label>
+                        <label for="mail">E-Mail<span aria-hidden="true"> *</span></label>
                         <input id="mail" type="email" placeholder="Enter your email address" required/>
-                        <label for="phone">Phone Number<span aria-hidden="true">*</span></label>
+                        <label for="phone">Phone Number<span aria-hidden="true"> *</span></label>
                         <input id="phone" type="tel" placeholder="Enter you phone number" required/>
                     </fieldset>
                     <fieldset class="information">
@@ -95,7 +100,7 @@
                         <label for="workshop-no">No</label>
                         <input id="workshop-no" name="workshop" value="no" type="radio"/>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="workshop">
                         <legend>Preferred workshop</legend>
                         <div class="option-group">
                         <label for="cloud">Cloud Architecture</label>
@@ -112,7 +117,11 @@
                     </fieldset>
                     <fieldset class="comments">
                     <legend>Accessibility</legend>
-                    <textarea id="comments" name="comments" placeholder="Please let us know if there is anything we can do to make your experience more comfortable."></textarea>
+                    <textarea 
+                    id="comments" 
+                    name="comments" 
+                    placeholder="Please let us know if there is anything we can do to make your experience more comfortable."
+                    rows="10"></textarea>
                     </fieldset>
                     <fieldset class="newsletter">
                     <legend>Newsletter</legend>
@@ -127,6 +136,7 @@
                     <button type="reset" class="reset">Reset Form</button>
                     
                 
-                </form>
+            </form>
+        </main>        
         </body>
         </html>
