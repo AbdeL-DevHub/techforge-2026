@@ -76,3 +76,13 @@ td{
 }
 
 
+@media (max-width:600px) {
+    table {
+        width:100%;
+        text-wrap: balance;
+        background-color: #353535;
+        min-height:78dvh;
+    }
+
+    
+}

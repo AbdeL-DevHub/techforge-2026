@@ -135,3 +135,15 @@ span > em {
    transition: transform 0.5s, box-shadow 0.5s;
 }
 
+
+@media (max-width:600px){
+    .container {
+        display:grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(3, 1fr);
+        max-width:80%;
+        margin:0 auto;
+        gap:3rem;
+        margin-block-start:8rem;
+    }
+}

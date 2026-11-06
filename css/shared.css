@@ -25,9 +25,7 @@ body {
 :lang(ar) {
   font-family: 'Noto Sans Arabic';
 }
-.hero {
-    text-align: center;
-}
+
 
 nav {
     margin:0;
@@ -35,41 +33,59 @@ nav {
 
 .navbar {
     position: fixed;
-    top:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: min(100%, 60rem);
     display: flex;
+    justify-content: center;
     list-style: none;
-    gap:2rem;
-    background-color: rgba(2, 2, 2, 0.8);
+    gap:4rem;
+    background: radial-gradient(ellipse at top center, hsla(225, 59%, 20%, 0.4), #000,#000);
     padding-inline:2.5rem;
     padding-block:2rem;
-    margin:0;
+    margin: 0 auto;
     z-index:1111;
-    width:100%;
      backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
 
 
-.navbar li:nth-of-type(5){
-    margin-inline-start: auto;
-}
-
-
 
 a{
-    font-family:"Roboto";
+    font-family:Roboto, serif;
     color: rgb(212, 212, 212);
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    transition: opacity 0.2s, border-color 0.2s;
 }
 
 .navbar a:hover {
     border-bottom: 2px solid whitesmoke;
+}
 
+.navbar:has(a[aria-current="page"]) a:not([aria-current="page"]) {
+  opacity: 0.7;
 }
 
 a[aria-current="page"] {
-  font-weight: bold;
-  color: hsl(225, 64%, 52%);
-  border-bottom: 2px solid hsl(225, 64%, 52%);
+  border-bottom-color:hsl(225, 57%, 49%);
+  color:#FFF;
+}
+
+
+@media (max-width:600px){
+    .navbar {
+        display:flex;
+        justify-content: center;
+        gap:1rem;
+        width:100%;
+        padding-inline:1rem;
+        background: radial-gradient(ellipse at top center, hsla(225, 59%, 20%, 0.4),hsla(225, 59%, 20%, 0.4), #000,#000,#000);
+    }
+
+    a {
+        font-size:0.9rem;
+    }
+   
 }
