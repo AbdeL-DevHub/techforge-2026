@@ -18,12 +18,16 @@ p {
     text-align: center;
 }
 main {
-    margin-block-start:10rem;
+    margin-block-start:7rem;
     color:#292929;
 }
 .para {
     margin-block-end:2rem;
     color:#f0f0f0;
+    line-height:2;
+    text-wrap: balance;
+    width:60ch;
+    margin-inline:auto;
 }
 
 input,
@@ -205,3 +209,10 @@ input:not(input[type="radio"], input[type="checkbox"]) {
     padding:1rem;
 }
 
+
+@media (max-width:600px) {
+    .para{
+        width:48ch;
+        text-wrap:pretty;
+    }
+}

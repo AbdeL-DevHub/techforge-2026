@@ -10,34 +10,20 @@ html {
 }
 
 body {
-    min-height:100vh;
+    height:80vh;
 }
 
-h1 {
-    text-align: center;
-    margin: 0 auto;
-    text-shadow: 0px 1px 2px  rgb(34, 34, 34);
-    font-size: 2rem;
-}
-
-
-h1:has(span)::first-letter{
-    color:orange;
-    font-weight:900;
-    text-shadow: 0px 1px 3px  rgb(255, 0, 0);
-}
 
  .container > .cards {
     border-radius: 0.7rem;
     text-align: center;
-    background-color: white;
-    transition: all 0.5s ease-out;
+    background-color: rgb(216, 206, 194);
+    transition: transform 0.5s ease;
     
 }
 
 .container > .cards:hover{
-    transform: scale(1.02);
-    box-shadow: -5px -1px 3px rgb(99, 80, 48);
+    transform: scale(1.01);
     
 }
 
@@ -54,35 +40,42 @@ h1:has(span)::first-letter{
     max-width: 1100px;
     margin-inline: auto;
     margin-block-start:10rem;
-    color:#222222;
+    color:#000000;
 }
 
 .cards {
     display:flex;
     flex-flow: column nowrap;
     padding:2rem;
-    line-height: 3rem;
-    word-spacing: 0.2rem;
+    text-wrap:balance;
     transition: all 0.2s ease;
 }
 
 
-.container h4{
-    color: rgb(185, 18, 52);
+
+
+.container code{
+    color: rgb(75, 64, 66);
+    background-color:rgb(219, 218, 218);
+    width:fit-content;
+    margin:0 auto;
+    margin-block-start:0.9rem;
+    padding-inline:0.5rem;
+    padding-block:0.5rem;
 }
 
 
 .cards > p {
-    line-height: 2rem;
+    line-height: 3;
     word-spacing: 0.2rem;
 }
 
 .cards > h2 {
-    color:rgb(80, 80, 80);
+    color:rgb(75, 64, 66);
 }
 
 :is(.cards > span, span > em ){
-    color: rgb(80, 80, 80);
+    color: rgb(75, 64, 66);
 }
 
 .cards > span {
@@ -110,30 +103,42 @@ span > em {
     font-weight: bolder;
 }
 
+.cards span {
+    text-wrap: pretty;
+}
+
 .cards > a {
     color: white;
     background-color: rgb(58, 58, 58);
     text-decoration: none;
     border-radius: 5px;
     padding-inline:1rem;
+    padding-block:0.5rem;
     display: block;
     margin: 0 auto;
-    margin-top: auto;
+    margin-block-start:2rem;
     align-self: center;
 
 }
 
 .cards > a:hover {
-    color: white;
-    background-color: rgb(46, 98, 146);
+    color: rgb(3, 3, 3);
+    background-color: hsl(0, 0%, 96%);
 }
 
 
 :is(#maya-card, #daniel-card, #sofia-card):target{
-   box-shadow: 1px 0 15px red;
+   box-shadow: 1px 0 15px hsl(225, 57%, 49%);
    transform: scale(1.04);
    transition: transform 0.5s, box-shadow 0.5s;
 }
+
+#sofia-card p {
+    line-height: 3.5;
+
+}
+
+
 
 
 @media (max-width:600px){
@@ -146,4 +151,17 @@ span > em {
         gap:3rem;
         margin-block-start:8rem;
     }
+
+    html {
+        overflow:auto;
+    }
+
+    .cards > span {
+        margin-block-start:1rem;
+    }
+
+    .cards > a {
+        margin-block-start:2rem;
+    }
+   
 }

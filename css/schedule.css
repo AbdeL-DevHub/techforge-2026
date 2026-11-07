@@ -81,7 +81,12 @@ td{
         width:100%;
         text-wrap: balance;
         background-color: #353535;
-        min-height:78dvh;
+        min-height:84dvh;
+        overflow:auto;
+    }
+
+    .date {
+        margin-block-start:6rem;
     }
 
     
